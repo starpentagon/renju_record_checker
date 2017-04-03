@@ -4,6 +4,9 @@ cmake_minimum_required(VERSION 3.5.1)
 set(project_name renju_record_checker)
 project(${project_name} CXX)
 
+# Build Type(Release or Debug)
+set(CMAKE_BUILD_TYPE Release)
+
 # ccache
 find_program(CCACHE_FOUND ccache)
 if(CCACHE_FOUND)
