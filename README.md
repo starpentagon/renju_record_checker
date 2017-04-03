@@ -38,6 +38,7 @@ outputs the renju game record in this format.
 ## How to build
 
 Move to the root directory of the Renju record checker, and run
+
 `./build.sh`
 
 You can find the program in build/renju_record_checker
@@ -46,6 +47,7 @@ You can find the program in build/renju_record_checker
 
 1. Check the record game record
 Run:
+
 `./renju_record_checker --db (Game record file)`
 
 Output:
@@ -54,4 +56,5 @@ Output:
 
 2. Show help
 Run:
+
 `./renju_record_checker --help`
