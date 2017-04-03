@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
     cout << endl;
     cout << "The checker outputs:" << endl;
     cout << "\tModified game records in standard output" << endl;
-    cout << "\tChecking long in standard error" << endl;
+    cout << "\tCheck result log in standard error" << endl;
 
     return 0;
   }
