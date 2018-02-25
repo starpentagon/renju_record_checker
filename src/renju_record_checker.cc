@@ -68,7 +68,7 @@ int main(int argc, char* argv[])
 
     for(const auto move : game_record){
       const bool is_black = board_move.IsBlackTurn();
-      const bool is_normal_move = board.IsNormalMove(is_black, move);
+      const bool is_normal_move = board.IsNormalMove(move);
       
       if(!is_normal_move){
         // 正規手ではない(空点でない or 相手の四ノビを防いでいない)
@@ -82,7 +82,7 @@ int main(int argc, char* argv[])
         break;
       }
 
-      const bool is_terminate_move = board.IsTerminateMove(is_black, move);
+      const bool is_terminate_move = board.IsTerminateMove(move);
       const bool last_move = game_record.GetLastMove() == move;
 
       if(is_terminate_move && !last_move){
@@ -98,7 +98,10 @@ int main(int argc, char* argv[])
         break;
       }
 
-      board.MakeMove(move);
+      if(!is_terminate_move){
+        board.MakeMove(move);
+      }
+
       board_move += move;
     }
 
