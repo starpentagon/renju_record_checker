@@ -19,6 +19,7 @@ add_definitions("-Wall -std=c++14")
 
 # インクルードパス
 include_directories(${CMAKE_SOURCE_DIR}/realcore/src/include)
+include_directories($ENV{BOOST_DIR}/include)
 
 # ライブラリパス
 link_directories($ENV{BOOST_DIR}/lib)
@@ -27,9 +28,14 @@ link_directories($ENV{BOOST_DIR}/lib)
 add_executable(
     ${project_name}
     ./realcore/src/CSVReader.cc
+    ./realcore/src/Move.cc
     ./realcore/src/MoveList.cc
+    ./realcore/src/BitSearch.cc
     ./realcore/src/BitBoard.cc
     ./realcore/src/Board.cc
+    ./realcore/src/OpenState.cc
+    ./realcore/src/BoardOpenState.cc
+    ./realcore/src/LineNeighborhood.cc
     ./src/renju_record_checker.cc
 )
 

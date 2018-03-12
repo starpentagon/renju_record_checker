@@ -37,7 +37,13 @@ outputs the renju game record in this format.
 
 ## How to build
 
-Move to the root directory of the Renju record checker, and run
+## Update submodule
+Move to the realcore directory in the root directory of the Renju record checker,
+update the submodules
+`git submodule init`
+`git submodule update`
+
+Then, move to the root directory of the Renju record checker, and run
 
 `./build.sh`
 
