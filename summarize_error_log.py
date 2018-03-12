@@ -7,6 +7,8 @@ args = sys.argv
 if len(args) != 2:
     print('Usage: ./summarize_error_log (error_log)')
 
+    exit(0)
+
 error_log_file = args[1]
 
 error_log_df = pd.read_csv(error_log_file)
